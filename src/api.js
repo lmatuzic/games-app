@@ -30,11 +30,10 @@ const currentDate = `${currentYear}/${currentMonth}/${currentDay}`;
 const lastYear = `${currentYear - 1}/${currentMonth}/${currentDay}`;
 //const nextYear = `${currentYear + 1}/${currentMonth}/${currentDay}`;
 
-
+//all games
+const all_games = `games`
+export const allGamesURL = () => `${base_url}${all_games}`;
 
 //popular games
-const popular_games = `games?dates=${lastYear}, ${currentDate}&ordering=-rating&page_size=10`
-
-export const popularGamesURL = () => {
-  return `${base_url}${popular_games}`
-}
+const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+export const popularGamesURL = () => `${base_url}${popular_games}`;
