@@ -7,13 +7,14 @@ import './stylesheet/application.scss'
 
 function App() {
   const dispatch = useDispatch();
+  
   useEffect(() => {
     dispatch(loadGames());
   }, [dispatch]);
 
   return (
     <div className="App">
-      <h1>Yo!</h1>
+      <h1>Yo</h1>
     </div>
   );
 }
