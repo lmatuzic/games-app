@@ -18,7 +18,6 @@ function Home() {
 
   // get data from store
   const games = useSelector(state => state.games);
-  console.log(games.all)
 
   return (
     <div className="container">
