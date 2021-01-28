@@ -7,7 +7,10 @@ const Game = ({name, released, image}) => {
 
       <div className='game__body'>
         <h4 className='game__title'>{name}</h4>
-        <div className='game__release'>Release date: {released}</div>
+        <div className='game__release'>
+          <span>Release date:</span> 
+          {released}
+        </div>
       </div>
     </div>
   )

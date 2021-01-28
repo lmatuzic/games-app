@@ -21,9 +21,48 @@ function Home() {
 
   return (
     <div className="container">
+      <h4 className="category__title">All</h4>
       <div className='game__list'>
-        
         {games.all && games.all.map(game => (
+          <Game 
+            key={game.id}
+            id={game.id}
+            name={game.name} 
+            released={game.released}
+            image={game.background_image}
+          />
+        ))}
+      </div>
+
+      <h4 className="category__title">Popular</h4>
+      <div className='game__list'>
+        {games.popular && games.popular.map(game => (
+          <Game 
+            key={game.id}
+            id={game.id}
+            name={game.name} 
+            released={game.released}
+            image={game.background_image}
+          />
+        ))}
+      </div>
+
+      <h4 className="category__title">New</h4>
+      <div className='game__list'>
+        {games.new && games.new.map(game => (
+          <Game 
+            key={game.id}
+            id={game.id}
+            name={game.name} 
+            released={game.released}
+            image={game.background_image}
+          />
+        ))}
+      </div>
+
+      <h4 className="category__title">Upcoming</h4>
+      <div className='game__list'>
+        {games.upcoming && games.upcoming.map(game => (
           <Game 
             key={game.id}
             id={game.id}
