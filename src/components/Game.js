@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Game = ({name, released, image}) => {
+const Game = ({name, released, image, id}) => {
   return (
-    <div className='game'>
+    <div className='game' id={id}>
       <img src={image} alt={name} className='game__img'/>
 
       <div className='game__body'>

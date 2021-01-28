@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import defaultGameImg from '../images/default.png'
 
 // redux
 import { useDispatch, useSelector } from 'react-redux'
@@ -28,8 +29,8 @@ function Home() {
             key={game.id}
             id={game.id}
             name={game.name} 
-            released={game.released}
-            image={game.background_image}
+            released={game.released === null ? 'unknown' : game.released}
+            image={game.background_image === null ? defaultGameImg : game.background_image }
           />
         ))}
       </div>
@@ -41,8 +42,8 @@ function Home() {
             key={game.id}
             id={game.id}
             name={game.name} 
-            released={game.released}
-            image={game.background_image}
+            released={game.released === null ? 'unknown' : game.released}
+            image={game.background_image === null ? defaultGameImg : game.background_image }
           />
         ))}
       </div>
@@ -54,8 +55,8 @@ function Home() {
             key={game.id}
             id={game.id}
             name={game.name} 
-            released={game.released}
-            image={game.background_image}
+            released={game.released === null ? 'unknown' : game.released}
+            image={game.background_image === null ? defaultGameImg : game.background_image }
           />
         ))}
       </div>
@@ -67,8 +68,8 @@ function Home() {
             key={game.id}
             id={game.id}
             name={game.name} 
-            released={game.released}
-            image={game.background_image}
+            released={game.released === null ? 'unknown' : game.released}
+            image={game.background_image === null ? defaultGameImg : game.background_image }
           />
         ))}
       </div>
