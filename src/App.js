@@ -6,9 +6,9 @@ import './stylesheet/application.scss'
 
 function App() {
   return (
-    <div className="App">
+    <main className='content'>
       <Home />
-    </div>
+    </main>
   );
 }
 

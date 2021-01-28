@@ -17,14 +17,13 @@ function Home() {
 
   // get data from store
   const games = useSelector(state => state.games);
-  console.log(games);
+  console.log(games.all)
 
   return (
-    <div className='game__list'>
-      <h1>Home</h1>
-
-      <div>
-        {games.upcoming && games.upcoming.map(game => (
+    <div className="container">
+      <div className='game__list'>
+        
+        {games.all && games.all.map(game => (
           <Game 
             key={game.id}
             id={game.id}
