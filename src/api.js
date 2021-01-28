@@ -12,3 +12,7 @@ export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
 //popular games
 const popular_games = `games?ordering=-rating&page_size=10`;
 export const popularGamesURL = () => `${base_url}${popular_games}`;
+
+//new games
+const new_games = `games?ordering=-released&page_size=10`;
+export const newGamesURL = () => `${base_url}${new_games}`;

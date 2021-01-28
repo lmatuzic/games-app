@@ -11,7 +11,10 @@ const gamesReducer = (state = {initialState}, action) => {
     case "FETCH_GAMES":
       return {
         ...state, 
-        all: action.payload.all.data.results.map(game => game.name)
+        all: action.payload.all.map(game => game.name),
+        upcoming: action.payload.upcoming.map(game => game.name),
+        popular: action.payload.popular.map(game => game.name),
+        new: action.payload.new.map(game => game.name)
       }
     default: 
       return {...state}
