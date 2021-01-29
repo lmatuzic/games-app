@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 //redux
 import { useDispatch } from 'react-redux'
@@ -12,16 +13,17 @@ const Game = ({name, released, image, id}) => {
   };
 
   return (
-    <div className='game' id={id} onClick={loadDetailsHandler}>
-      <img src={image} alt={name} className='game__img'/>
+    <div className='game' onClick={loadDetailsHandler}>
+      <Link to={`/game/${name}`}>
+        <img src={image} alt={name} className='game__img'/>
 
-      <div className='game__body'>
-        <h4 className='game__title'>{name}</h4>
-        <div className='game__release'>
-          <span>Release date:</span> 
-          {released}
+        <div className='game__body'>
+          <h4 className='game__title'>{name}</h4>
+          <div className='game__release'>
+            <span>Release date: {released}</span> 
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   )
 }
