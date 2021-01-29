@@ -8,29 +8,32 @@ const GameDetails = () => {
     <>
       {!isLoading && (
         <div className="game__details">
-          <div>{game.name}</div>
-
-          <div>
-            Platform: 
-            {game.platforms && game.platforms.map(data => (
-              <span key={data.platform.id}>{data.platform.name}</span>
-            ))}
+          <div className="parallax" style={{backgroundImage: `url(${(game.background_image)})`}}>
           </div>
 
-          <div>Rating: {game.rating}</div>
+          <div className="container">
+            <h1>{game.name}</h1>
 
-          <div className="description">
-            <p>{game.description_raw}</p>
-          </div>
-          
-          <div className="media">
-            <img src={game.background_image} alt="gameBackground"/>
-          </div>
+            <div className="basics__info">
+              <div className="rating">{game.rating}</div>
+              <div className="basics__separator"></div>
+              <div className="platforms">
+                {game.platforms && game.platforms.map(data => (
+                  <span key={data.platform.id}>{data.platform.name}</span>
+                ))}
+              </div>
+            </div>
 
-          <div className="gallery">
-            {screenshots && screenshots.map(screenshot => (
-              <img src={screenshot.image} alt="gameScreenshot" key={screenshot.id}/>
-            ))}
+            <div className="description">
+              <h4>Description</h4>
+              <p>{game.description_raw}</p>
+            </div>
+            
+            <div className="gallery">
+              {screenshots && screenshots.map(screenshot => (
+                <img src={screenshot.image} alt="gameScreenshot" key={screenshot.id}/>
+              ))}
+            </div>
           </div>
         </div>
       )}

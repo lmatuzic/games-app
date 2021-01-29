@@ -36,6 +36,59 @@
       }
     }
   }
+
+  &__details {
+    .parallax {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 650px;
+
+      @media only screen and (max-width: 768px) {
+        height: 400px;
+      }
+    }
+
+    h1 {
+      margin: 2rem 0 1rem 0;
+    }
+
+    .basics {
+      &__info {
+        display: flex;
+        margin-bottom: 3rem;
+      }
+
+      &__separator {
+        width: 1px;
+        height: 18px;
+        margin: 0 14px;
+        background: #545454;
+      }
+    }
+
+    .description {
+      h4 {
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $gray;
+      }
+
+      p {
+        margin-bottom: 3rem;
+        color: $black;
+        line-height: 20px;
+        font-weight: 300;
+      }
+    }
+
+    .gallery {
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .category {
