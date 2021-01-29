@@ -49,7 +49,7 @@ function Home() {
 
       <h4 className="category__title">New</h4>
       <div className='game__list'>
-        {games.new && games.new.map(game => (
+        {games.newGames && games.newGames.map(game => (
           <Game 
             key={game.id}
             id={game.id}
