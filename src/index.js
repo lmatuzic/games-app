@@ -12,10 +12,39 @@ import thunk from 'redux-thunk';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+function saveToLocalStorage(state) {
+  try {
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem('state', serializedState);
+  } catch(error) {
+    console.log(error);
+  }
+}
+
+function loadFromLocalStorage() {
+  try {
+    const serializedState = localStorage.getItem('state');
+    
+    if (serializedState === null) {
+      return undefined;
+    } else {
+      return JSON.parse(serializedState);
+    }
+  } catch (error) {
+    console.log(error);
+    return undefined;
+  }
+}
+
+const persistedState = loadFromLocalStorage()
+
 const store = createStore(
-	rootReducer,
+  rootReducer,
+  persistedState,
 	composeEnhancer(applyMiddleware(thunk))
 );
+
+store.subscribe(() => saveToLocalStorage(store.getState()));
 
 ReactDOM.render(
   <React.StrictMode>
