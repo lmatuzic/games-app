@@ -6,7 +6,7 @@ const all_games = `games`
 export const allGamesURL = () => `${base_url}${all_games}`;
 
 // upcoming games
-const upcoming_games = `games?&ordering=added&page_size=10`
+const upcoming_games = `games?&ordering=-released&page_size=10`
 export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
 
 // popular games
