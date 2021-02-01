@@ -10,7 +10,7 @@ import { Provider } from 'react-redux'
 import rootReducer from './reducers';
 import thunk from 'redux-thunk';    
 
-const composeEnhancer = compose;
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 function saveToLocalStorage(state) {
   try {
