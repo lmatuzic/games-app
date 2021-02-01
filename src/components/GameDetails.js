@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaPlaystation, FaStar, FaGamepad, FaXbox, FaSteam } from 'react-icons/fa';
+import { FaPlaystation, FaStar, FaXbox, FaSteam } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 
 const GameDetails = () => {
