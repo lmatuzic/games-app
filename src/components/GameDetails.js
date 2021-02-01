@@ -38,6 +38,7 @@ const GameDetails = () => {
                 {game.platforms?.map(data => (
                   <span key={data.platform.id}>
                     {getPlatform(data.platform.name)}
+                    <span className="tooltip">{data.platform.name}</span>
                   </span>
                 ))}
               </div>
