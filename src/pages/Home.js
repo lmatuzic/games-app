@@ -21,6 +21,25 @@ function Home() {
 
   return (
     <div className="container">
+      {games.searched.length ? (
+        <div className="search__results">
+          <h4 className="category__title searched__title">Search results</h4>
+
+          <div className='game__list'>
+            {games.searched && games.searched.map(game => (
+              <Game 
+                key={game.id}
+                id={game.id}
+                name={game.name} 
+                released={game.released === null ? 'unknown' : game.released}
+                image={game.background_image === null ? defaultGameImg : game.background_image }
+              />
+            ))}
+          </div>
+        </div>
+      ) : ''}
+
+    {/* whenClicked is a property not an event, per se.         
       <h4 className="category__title">All</h4>
       <div className='game__list'>
         {games.all && games.all.map(game => (
@@ -33,6 +52,7 @@ function Home() {
           />
         ))}
       </div>
+    */} 
 
       <h4 className="category__title">Popular</h4>
       <div className='game__list'>
