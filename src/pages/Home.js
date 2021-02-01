@@ -39,7 +39,7 @@ function Home() {
         </div>
       ) : ''}
 
-    {/* whenClicked is a property not an event, per se.         
+    {/*     
       <h4 className="category__title">All</h4>
       <div className='game__list'>
         {games.all && games.all.map(game => (
