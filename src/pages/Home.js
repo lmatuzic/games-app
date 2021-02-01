@@ -25,7 +25,7 @@ function Home() {
     <>
       <Navbar />
       <div className="container">
-        {games.searched.length ? (
+        {games.searched.length === 0 ? '' : (
           <div className="search__results">
             <h4 className="category__title searched__title">Search results</h4>
 
@@ -41,7 +41,7 @@ function Home() {
               ))}
             </div>
           </div>
-        ) : ''}
+        )}
 
       {/*     
         <h4 className="category__title">All</h4>
