@@ -36,7 +36,7 @@ function loadFromLocalStorage() {
   }
 }
 
-const persistedState = loadFromLocalStorage()
+const persistedState = loadFromLocalStorage();
 
 const store = createStore(
   rootReducer,

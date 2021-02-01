@@ -1,9 +1,26 @@
 import React from 'react'
-import { FaStar } from 'react-icons/fa';
+import { FaPlaystation, FaStar, FaGamepad, FaXbox, FaSteam } from 'react-icons/fa';
 import { useSelector } from 'react-redux'
 
 const GameDetails = () => {
   const { game, screenshots, isLoading } = useSelector(state => state.details)
+
+  const getPlatform = (platform) => {
+    switch(platform) {
+      case "PlayStation 3":
+        return <FaPlaystation />;
+      case "PlayStation 4":
+        return <FaPlaystation />;
+      case "PlayStation 5":
+        return <FaPlaystation />;
+      case "Xbox One":
+        return <FaXbox />;
+      case "PC":
+        return <FaSteam />;
+      default: 
+        return '';
+    }
+  }
 
   return (
     <>
@@ -19,7 +36,9 @@ const GameDetails = () => {
               <div className="basics__separator"></div>
               <div className="platforms">
                 {game.platforms?.map(data => (
-                  <span key={data.platform.id}>{data.platform.name}</span>
+                  <span key={data.platform.id}>
+                    {getPlatform(data.platform.name)}
+                  </span>
                 ))}
               </div>
             </div>

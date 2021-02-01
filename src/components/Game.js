@@ -15,7 +15,9 @@ const Game = ({name, released, image, id}) => {
   return (
     <div className='game' onClick={loadDetailsHandler}>
       <Link to={`/game/${name}`}>
-        <img src={image} alt={name} className='game__img'/>
+        <div className="game__head">
+          <img src={image} alt={name} className='game__img'/>
+        </div>
 
         <div className='game__body'>
           <h4 className='game__title'>{name}</h4>
