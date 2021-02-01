@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: $bordeaux;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0px 1px 3px 1px rgba($color: $black, $alpha: 0.3);
+  opacity: 0.95;
+
+  svg {
+    color: white;
+    font-size: 22px;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+  
+    input {
+      padding: 10px;
+      outline: none;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0px 1px 3px 1px rgba($color: $black, $alpha: 0.3);
+      background-color: $baby-gray;
+      font-size: 1rem;
+
+      @media only screen and (max-width: 768px) { 
+        width: 100%;
+      }
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 0 1.5rem;
+      margin-left: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 2px;
+      outline: none;
+      background-color: $black;
+      color: $baby-gray;
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: lighten($color: $black, $amount: 10%);
+      }
+    }
+  }
+}
+
