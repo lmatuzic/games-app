@@ -8,17 +8,17 @@ const GameDetails = () => {
   const getPlatform = (platform) => {
     switch(platform) {
       case "PlayStation 3":
-        return <FaPlaystation />;
+        return <FaPlaystation />
       case "PlayStation 4":
-        return <FaPlaystation />;
+        return <FaPlaystation />
       case "PlayStation 5":
-        return <FaPlaystation />;
+        return <FaPlaystation />
       case "Xbox One":
-        return <FaXbox />;
+        return <FaXbox />
       case "PC":
-        return <FaSteam />;
+        return <FaSteam />
       default: 
-        return '';
+        return ''
     }
   }
 
