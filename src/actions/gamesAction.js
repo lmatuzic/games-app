@@ -7,6 +7,7 @@ export const loadGames = () => async(dispatch) => {
   const upcomingGamesData = await axios.get(upcomingGamesURL());
   const popularGamesData = await axios.get(popularGamesURL());
   const newGamesData = await axios.get(newGamesURL());
+  const searched = await axios.get(searchedGamesURL());
 
   dispatch({
     type: "FETCH_GAMES",
@@ -14,18 +15,19 @@ export const loadGames = () => async(dispatch) => {
       all: allGamesData.data.results,
       upcoming: upcomingGamesData.data.results,
       popular: popularGamesData.data.results,
-      newGames: newGamesData.data.results
+      newGames: newGamesData.data.results,
+      searched: searched.data.results
     },
   });
 };
 
 export const fetchSearch = (game_name) => async(dispatch) => {
-  const searchedGames = await axios.get(searchedGamesURL(game_name));
+  const searched = await axios.get(searchedGamesURL(game_name));
 
   dispatch({
     type: "FETCH_SEARCHED_GAMES",
     payload: {
-      searched: searchedGames.data.results
+      searched: searched.data.results
     }
   })
 }
