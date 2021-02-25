@@ -1,4 +1,4 @@
-Web app showing games from API with search functionality
+Web app showing games from API with search functionality and Redux state management
 
 ## Local setup
 
